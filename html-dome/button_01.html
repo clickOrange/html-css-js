@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按钮</title>
+</head>
+<body>
+    <style>
+        button{
+            /* 宽'高'外边距'内边距'轮廓线'边框'边框半径'背景颜色'盒阴影' */
+            width:  100px;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px #000;
+        }
+    </style>
+    <button id="btn">按钮</button>
+    <script>
+        onload = function (){
+            let btn = document.getElementById('btn');
+                // 鼠标按下
+                btn.onmousedown = function(){
+                    this.style.boxShadow = "0 0 20px #333";
+                    console.log("点击次数");
+                }
+                // 鼠标弹起
+                btn.onmouseup = function(){
+                    this.style.boxShadow = "";
+                }
+                // 鼠标移入
+                btn.onmouseover = function(){
+                    this.style.backgroundColor = "#ddd"
+                }
+                // 鼠标移出
+                btn.onmouseout = function(){
+                    this.style.backgroundColor = "";
+                }
+        }
+    </script>
+    
+</body>
+</html>
+
